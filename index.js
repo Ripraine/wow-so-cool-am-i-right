@@ -18,9 +18,14 @@ llama-3.1-8b-instant
 llama3-70b-8192
 llama3-8b-8192
 mixtral-8x7b-32768
+llama-3.3-70b-versatile
 llama-3.3-70b-specdec
 llama-3.2-1b-preview
 llama-3.2-3b-preview
+deepseek-r1-distill-llama-70b
+deepseek-r1-distill-qwen-32b
+qwen-2.5-32b
+qwen-2.5-coder-32b
 `
   .trim()
   .split("\n")
@@ -58,8 +63,6 @@ app.use((req, res, next) => {
   }
   next();
 });
-const apiKeys = [process.env.API_KEY, process.env.API_KEY1];
-randomAPIKey = apiKeys[Math.floor(Math.random() * apiKeys.length)];
 
 app.post("/api/chat", async (req, res) => {
   const { message, userId } = req.body;
@@ -82,7 +85,7 @@ app.post("/api/chat", async (req, res) => {
       },
       {
         headers: {
-          Authorization: `Bearer ${randomAPIKey}`,
+          Authorization: `Bearer ${process.env.API_KEY}`,
           "Content-Type": "application/json",
         },
       },
@@ -143,6 +146,7 @@ app.post("/api/chat", async (req, res) => {
       res
         .status(500)
         .json({ error: "An error occurred while processing your request." });
+      console.log(error);
     }
   }
 });
@@ -202,6 +206,7 @@ app.post("/api/signUp", async (req, res) => {
     res
       .status(500)
       .json({ error: "An error occurred while processing your request." });
+    console.log(error);
   }
 });
 app.post("/api/login", async (req, res) => {
@@ -312,10 +317,10 @@ app.post("/api/readSave", async (req, res) => {
   }
 });
 
-// app.use((req, res, next) => {
-//   res.setHeader("X-Frame-Options", "SAMEORIGIN");
-//   next();
-// });
+app.use((req, res, next) => {
+  res.setHeader("X-Frame-Options", "SAMEORIGIN");
+  next();
+});
 app.use(express.static(path.join(__dirname, "static")));
 app.use((req, res, next) => {
   if (req.method === "GET" && !path.extname(req.url)) {
@@ -332,17 +337,17 @@ app.use((req, res, next) => {
 
 const routes = [
   { path: "/a", file: "apps.html" },
-  { path: "/g", file: "art.html" },
+  { path: "/g", file: "games.html" },
   { path: "/s", file: "settings.html" },
-  { path: "/p", file: "science.html" },
-  { path: "/!", file: "!.html" },
+  { path: "/!", file: "proxy.html" },
   { path: "/", file: "index.html" },
   { path: "/d", file: "dashboard.html" },
-  { path: "/e", file: "english.html" },
-  { path: "/-", file: "math.html" },
+  { path: "/e", file: "ai.html" },
+  { path: "/-", file: "media.html" },
+  { path: "/m", file: "media.html" }, // possibly change all navbars to use /m
   { path: "/profile", file: "account.html" },
-  { path: "/login", file: "/assets/404/login.html" },
-  { path: "/signup", file: "/assets/404/signup.html" },
+  { path: "/login", file: "login.html" },
+  { path: "/signup", file: "signup.html" },
   { path: "/l", file: "/assets/404/loading.html" },
 ];
 

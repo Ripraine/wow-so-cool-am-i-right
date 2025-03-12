@@ -91,8 +91,14 @@
   },
   {
     "name": "Archery World Tour",
-    "url": "/misc/play/archerworldtour.html",
+    "url": "/misc/play/archeryworldtour.html",
     "image": "/misc/archeryWorldTour/img.webp?v=1",
+    "usesProxy": false
+  },
+  {
+    "name": "Super Star Car",
+    "url": "/misc/play/superstarcar.html",
+    "image": "/misc/superstarcar/splash.avif",
     "usesProxy": false
   },
   {
@@ -102,7 +108,7 @@
     "usesProxy": false
   },
   {
-    "name": "Awewome Tanks",
+    "name": "Awesome Tanks",
     "url": "/misc/play/awesometanks.html",
     "image": "/misc/awesometanks/game.webp",
     "usesProxy": false
@@ -721,9 +727,9 @@
   },
   {
     "name": "Learn to Fly 3",
-    "url": "https://www.silvergames.com/en/learn-to-fly-3/iframe",
+    "url": "/misc/play/learn-to-fly-3.html",
     "image": "/img/games/learntofly3.webp",
-    "usesProxy": true
+    "usesProxy": false
   },
   {
     "name": "Madalin Stunt Cars 3",
@@ -795,6 +801,12 @@
     "name": "MotoX3M Winter",
     "url": "/misc/play/motox3m-w.html",
     "image": "/misc/motox3m-winter/download.jpeg",
+    "usesProxy": false
+  },
+  {
+    "name": "Ping Pong Go",
+    "url": "/misc/play/pingponggo.html",
+    "image": "/misc/pingponggo/img.webp",
     "usesProxy": false
   },
   {
@@ -936,6 +948,12 @@
     "usesProxy": false
   },
   {
+    "name": "Super Foulist",
+    "url": "/misc/play/super-foulist.html",
+    "image": "/misc/super-foulist/img.webp",
+    "usesProxy": false
+  },
+  {
     "name": "Pokemon Crystal",
     "url": "/misc/play/pokemonc.html",
     "image": "/misc/emulator/pokemon/crystal/crystal.jpg",
@@ -966,6 +984,12 @@
     "usesProxy": false
   },
   {
+    "name": "Steel Hills",
+    "url": "/misc/play/steelhills.html",
+    "image": "/misc/steelhills/img.webp",
+    "usesProxy": false
+  },
+  {
     "name": "Pokemon Flora Sky",
     "url": "/misc/play/pokemonFS.html",
     "image": "/misc/emulator/pokemon/florasky/florasky.webp",
@@ -975,6 +999,12 @@
     "name": "Pokemon Ultraviolet",
     "url": "/misc/play/pokemonU.html",
     "image": "/misc/emulator/pokemon/ultraviolent/ultraviolent.webp",
+    "usesProxy": false
+  },
+  {
+    "name": "Fury Wars",
+    "url": "/misc/play/furywars.html",
+    "image": "/misc/furywars/img.webp",
     "usesProxy": false
   },
   {
@@ -1056,10 +1086,16 @@
     "usesProxy": false
   },
   {
+    "name": "Polytrack 0.4.1",
+    "url": "/misc/play/polytrack-0.4.1.html",
+    "image": "/img/games/polytrack.webp",
+    "usesProxy": false
+  },
+  {
     "name": "Retro Bowl College",
-    "url": "https://classroomjq.github.io/retro-bowl-college/",
+    "url": "/misc/play/retrobowlcollege.html",
     "image": "/misc/retrobowlcollege/img.png",
-    "usesProxy": true
+    "usesProxy": false
   },
   {
     "name": "Riddle School",
@@ -1149,12 +1185,6 @@
     "name": "Sandboxels",
     "url": "https://sandboxels.r74n.com/",
     "image": "/misc/sandboxels/img.webp",
-    "usesProxy": true
-  },
-  {
-    "name": "Half Life",
-    "url": "https://pixelsuft.github.io/hl/xash.html#150",
-    "image": "/img/games/halflife.webp",
     "usesProxy": true
   },
   {
@@ -1546,6 +1576,12 @@
     "url": "https://deadshot.io/",
     "image": "/img/games/deadshot.webp",
     "usesProxy": true
+  },
+  {
+    "name": "Zombie Derby",
+    "url": "/misc/play/zombiederby.html",
+    "image": "/misc/zombiederby/img.webp",
+    "usesProxy": false
   },
   {
     "name": "GBA Games",
